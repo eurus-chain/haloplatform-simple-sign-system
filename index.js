@@ -27,7 +27,7 @@ class SimpleSignSystem {
         const rawTx = Object.assign({}, originalTx);
         const address = rawTx.from;
         rawTx.nonce = await this.getNonce(address, web3);
-        rawTx.gasPrice = '0x0';      
+        rawTx.gasPrice = '0x8F0D1800';      
         const tx = new EthTx(rawTx);
         tx.sign(new Buffer(privateKey, 'hex'));
         const ob = {
